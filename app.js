@@ -41,3 +41,46 @@
 //         console.log("Usted no a elegido ninguna pelicula de la lista. Porfavor si desea ver alguna, elijala.");
 //         break;
 // }
+
+// let x = 8
+
+// while (x <= 10) {
+//     console.log(`El valor de X es ${x}`);
+//     x++;    
+// }
+let nombre = prompt ("Ingrese su nombre:")
+let apellido = prompt ("Ingrese su apellido:")
+
+alert ("Bienvenido" + " " + nombre + " " + apellido)
+
+let entrada = prompt (nombre + " " + apellido + " " + "¡Hola nuevamente!" + " " + "vaya ingresando palabras o numeros, y cuando finalize escriba ESC para interrumpir")
+
+let texto = " "
+
+while (entrada != "ESC" && entrada != "esc") {
+    texto += entrada + " "
+    entrada = prompt("Ingrese nuevamente palabras o numeros y cuando aya finalizado escriba ESC")
+}
+
+alert(nombre + " " + apellido + " " + "esto es lo que salio de lo que escribiste:") 
+alert(texto)
+
+
+// let y = 0
+
+// do{
+//     console.log(`El valor de Y es ${y}`);
+//     y++
+// } while (y <= 10);
+
+// let x = 25
+
+// do {
+//     console.log(x);
+//     x++
+// } while (x < 30);
+
+
+// for (let i = 0; i < 50; i++) {
+//     alert(`El valor de i es ${i}`);    
+// }
