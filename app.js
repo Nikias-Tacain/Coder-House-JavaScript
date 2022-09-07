@@ -27,7 +27,7 @@ do {
                                                 Valor por unidad: $500
                                                 Stock: 5 unidades`));
                     if (cantidadInjertos<=5){
-                        console.log("Has agregado" + " " + cantidadInjertos + " " + "Injertos." + " " + "Valor total de la compra:" + " " + cantidadInjertos*500);
+                        alert("Has agregado" + " " + cantidadInjertos + " " + "Injertos." + " " + "Valor total de la compra:" + " " + cantidadInjertos*500);
                     }else{
                         alert("Error al ingresar Injertos al carrito ¡Quedan solamente 5 unidades!");
                     }
@@ -37,7 +37,7 @@ do {
                                                 Valor por unidad: $750
                                                 Stock: 5 unidades`));
                     if (cantidadVelasSoja<=5){
-                        console.log("Has agregado" + " " + cantidadVelasSoja + " " + "Velas de soja." + " " + "Valor total de la compra:" + " " + cantidadVelasSoja*750);
+                        alert("Has agregado" + " " + cantidadVelasSoja + " " + "Velas de soja." + " " + "Valor total de la compra:" + " " + cantidadVelasSoja*750);
                     }else{
                         alert("Error al ingresar Velas de soja al carrito ¡Quedan solamente 5 unidades!");
                     }
@@ -47,7 +47,7 @@ do {
                                                 Valor por unidad: $900
                                                 Stock: 5 unidades`));
                     if (cantidadPortamacetaZinc<=5){
-                        console.log("Has agregado" + " " + cantidadPortamacetaZinc + " " + "Portamaceta zinc." + " " + "Valor total de la compra:" + " " + cantidadPortamacetaZinc*900);
+                        alert("Has agregado" + " " + cantidadPortamacetaZinc + " " + "Portamaceta zinc." + " " + "Valor total de la compra:" + " " + cantidadPortamacetaZinc*900);
                     }else{
                         alert("Error al ingresar Portamaceta zinc al carrito ¡Quedan solamente 5 unidades!");
                     }
@@ -57,7 +57,7 @@ do {
                                                 Valor por unidad: $1200
                                                 Stock: 5 unidades`));
                     if (cantidadPortamacetaTrioVintage<=5){
-                        console.log("Has agregado" + " " + cantidadPortamacetaZinc + " " + "Portamaceta trio vintage." + " " + "Valor total de la compra:" + " " + cantidadPortamacetaTrioVintage*1200);
+                        alert("Has agregado" + " " + cantidadPortamacetaZinc + " " + "Portamaceta trio vintage." + " " + "Valor total de la compra:" + " " + cantidadPortamacetaTrioVintage*1200);
                     }else{
                         alert("Error al ingresar Portamaceta trio vintage al carrito ¡Quedan solamente 5 unidades!");
                     }
@@ -67,7 +67,7 @@ do {
                                                 Valor por unidad: $1500
                                                 Stock: 5 unidades`));
                     if (cantidadEsferasFloresPreservadas<=5){
-                        console.log("Has agregado" + " " + cantidadEsferasFloresPreservadas + " " + "Esferas con flores preservadas." + " " + "Valor total de la compra:" + " " + cantidadEsferasFloresPreservadas*1500);
+                        alert("Has agregado" + " " + cantidadEsferasFloresPreservadas + " " + "Esferas con flores preservadas." + " " + "Valor total de la compra:" + " " + cantidadEsferasFloresPreservadas*1500);
                     }else{
                         alert("Error al ingresar Portamaceta trio vintage al carrito ¡Quedan solamente 5 unidades!");
                     }
@@ -78,7 +78,7 @@ do {
             }
             const carrito = []
             carrito.push(catalogo.toUpperCase())
-            alert("Carrito de compras" + carrito)
+            alert("Carrito de compras"+ "\n" + carrito)
 } while (nombre);
 
 /*const dom = document.querySelectorAll("h2")
