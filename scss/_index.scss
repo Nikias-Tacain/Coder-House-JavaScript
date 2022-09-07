@@ -1,0 +1,74 @@
+.index{
+    background-image: url(../logos/fondo-main.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgb(3, 3, 3);
+        &__img{
+            width: 6%;
+        }
+        &__section{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            &__div{
+                border: 1px solid rgb(7, 7, 7);
+                border-radius: 8px;
+                background-color: bisque;
+                &__ul{
+                    display: flex;
+                    flex-direction: row;
+                    &__li__anchor{
+                        font-size: 20px;
+                        margin: 25px;
+                    }
+                }
+                &__carrito{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    &__main{
+        &__h1{
+            display: flex;
+            justify-content: center;
+            margin-top: 3%;
+        }
+        &__section{
+            display: flex;
+            justify-content: space-between;
+            &__carrusel{
+                border: 1px solid white;
+            }
+            &__info{
+                margin:15px;
+                border: 1px solid white;
+                border-radius: 11px;
+                background-color: rgba($color: bisque, $alpha: 0.5);
+                text-align: center;
+                width: 50%;
+            }
+        }
+    }
+    &__footer{
+        justify-content: center;
+        display: flex;
+        &__share{
+            font-size: 35px;
+            border: 1px solid rgb(248, 198, 137);
+            border-radius: 25px;
+        }
+    }
+}
+.inicio__select{
+    text-decoration:line-through;
+    &:hover{
+        color: black;
+    }
+}
