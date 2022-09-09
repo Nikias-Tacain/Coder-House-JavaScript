@@ -1,0 +1,74 @@
+.productos{
+    &__header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgb(3, 3, 3);
+        &__img{
+            width: 6%;
+        }
+        &__section{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            &__div{
+                border: 1px solid rgb(7, 7, 7);
+                border-radius: 8px;
+                background-color: bisque;
+                &__ul{
+                    display: flex;
+                    flex-direction: row;
+                    &__li__anchor{
+                        font-size: 20px;
+                        margin: 25px;
+                    }
+                }
+                &__carrito{
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    &__main{
+        background-color: bisque;
+    }
+}
+.productos__select{
+    text-decoration:line-through;
+    &:hover{
+        color: black;
+    }
+}
+.tienda{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.tarjetas{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    min-height: 370px;
+    border: 3px solid white;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    transition: 0.3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+    .tarjetas__texto{
+        margin: 0.5rem;
+    }
+    .tarjetas__nombre{
+        color: #4287f5;
+    }
+    .tarjetas__precio{
+        font-size: large;
+    }
+}
