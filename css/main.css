@@ -124,9 +124,11 @@ li {
   transition: 0.3s; }
   .tarjetas:hover {
     transform: scale(1.1); }
-  .tarjetas .tarjetas__texto {
+  .tarjetas__texto {
     margin: 0.5rem; }
-  .tarjetas .tarjetas__nombre {
+  .tarjetas__nombre {
     color: #4287f5; }
-  .tarjetas .tarjetas__precio {
+  .tarjetas__precio {
     font-size: large; }
+  .tarjetas__botton__ver {
+    margin-left: 100px; }
