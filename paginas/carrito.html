@@ -18,35 +18,31 @@
                         <a class="productos__header__section__div__ul__li__anchor" href="../index.html">inicio</a>
                     </li>
                     <li>
-                        <a class="productos__header__section__div__ul__li__anchor">productos</a>
+                        <a class="productos__header__section__div__ul__li__anchor" href="./productos.html">productos</a>
                     </li>
                     <li>
-                        <a class="productos__header__section__div__ul__li__anchor" href="">contacto</a>
+                        <a class="productos__header__section__div__ul__li__anchor">contacto</a>
                     </li>
                 </ul>
             </div>
         </section>
     </header>
     <main>
-        <h1>Carrito de compras</h1>
-        <section>
+        <section id="carrito">
+            <h1>Carrito de Compras</h1>
             <div>
-                <span>Ingrese su nombre completo:</span>
-                <input type="text" placeholder="Nombre completo">
+                <h3>Ingrese sus datos para completar la compra:</h3>
             </div>
             <div>
-                <span>Ingrese su correo electronico:</span>
-                <input type="email" placeholder="Correo Electronico">
+                <label for="name">Nombre y Apellido:</label>
+                <label for="mail">Telefono:</label>
+                <label for="mail">Correo Electronico:</label>
             </div>
-            <span>Comprar con Tarjeta:</span>
             <div>
-                <span>Tarjeta de credito:</span>
-                <p>1 cuota sin interes <input type="checkbox"></p>
-                <p>3 cuotas sin interes <input type="checkbox"></p>
-                <p>6 cuotas sin interes <input type="checkbox"></p>
-                <p>12 cuotas sin interes <input type="checkbox"></p>
-                <p>Tarjeta de debito <input type="checkbox"></p>
-                <p>Efectivo <input type="checkbox"></p>
+                <input type="text" id="name">
+                <input type="text" id="phone">
+                <input type="text" id="email">
+                <button id="enviarInfo">Enviar Informacion</button>
             </div>
         </section>
     </main>

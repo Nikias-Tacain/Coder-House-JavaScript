@@ -1,4 +1,97 @@
+// Primera pre-entrega: funciones de orden superior
 
+const listacarrito = ["CARRITO DE COMPRAS:"]
+let acceso = prompt("¡Bienvenid@! ¿Nos podria brindar su nombre? Muchas Gracias.")
+
+let correo = prompt(acceso.toLowerCase() + "." + " " + "Porfavor, ingrese su correo electronico para futuras compras")
+
+alert(acceso.toLowerCase() + "." + " " + "Ingresaste a la tienda de Green Love.")
+
+function abrirTienda() {
+    while (acceso) {
+        let info = {
+            precioInjertos: 1300,
+            precioVelasSoja: 600,
+            precioComboDuo: 1200
+        }
+        let elegirArticulo = Number(prompt(`Tienda Green Love.
+                    Productos disponibles:
+                               1: Injertos
+                               2: Velas de soja
+                               3: Combo Duo
+                               4: * Carrito de compras *
+                               5: _salir_
+                                
+        (Escriba el numero de la opcion que desea. Gracias)`))
+        if (elegirArticulo == 1) {
+            let seleccionInjertos = Number(prompt(`Has seleccionado INJERTOS
+                    
+                    Precio por unidad: ${info.precioInjertos}
+                    
+                    
+                1: Agregar al carrito
+                2: Volver al menu`))
+            if (seleccionInjertos == 2) {
+                alert (abrirTienda())
+            }
+            else if (seleccionInjertos == 1) {
+                let cantidadInjertos = Number(prompt("¿Cuantos Injertos desea llevarse?"))
+                alert(`Has agregado al carrito: ${cantidadInjertos} Injertos.
+                            "ENTER para volver al menu"`,
+                            listacarrito.push(`Injertos: ${cantidadInjertos} unidades. Total: ${cantidadInjertos*info.precioInjertos} (Precio unidad: ${info.precioInjertos})`))
+            }
+        }
+        else if (elegirArticulo == 2) {
+            let seleccionVelasSoja = Number(prompt(`Has seleccionado Velas de Soja
+                    
+                Precio por unidad: ${info.velasSoja}
+            
+            
+            1: Agregar al carrito
+            2: Volver al menu`))
+            if (seleccionVelasSoja == 2) {
+                alert (abrirTienda())
+            }
+            else if (seleccionVelasSoja == 1) {
+                let cantidadVelasSoja = Number(prompt("¿Cuantas Velas de soja desea llevarse?"))
+                alert(`Has agregado al carrito: ${cantidadVelasSoja} Velas de soja.
+                            "ENTER para volver al menu"`,
+                            listacarrito.push(`Velas de soja: ${cantidadVelasSoja} unidades. Total: ${cantidadVelasSoja*info.precioVelasSoja} (Precio unidad: ${info.precioVelasSoja})`))
+                
+            }
+        }
+        else if (elegirArticulo == 3) {
+            let seleccionComboDuo = Number(prompt(`Has seleccionado Combo Duo
+                    
+                Precio por unidad: ${info.precioComboDuo}
+        
+        
+            1: Agregar al carrito
+            2: Volver al menu`))
+            if (seleccionComboDuo == 2) {
+            alert (abrirTienda())
+            }
+            else if (seleccionComboDuo == 1) {
+                let cantidadComboDuo = Number(prompt("¿Cuantos Combos Duos desea llevarse?"))
+                alert(`Has agregado al carrito: ${cantidadComboDuo} Combo Duo.
+                            "ENTER para volver al menu"`,
+                            listacarrito.push(`Combo Duo: ${cantidadComboDuo} unidades. Total: ${cantidadComboDuo*info.comboDuo} (Precio unidad: ${info.precioComboDuo})`))
+            }            
+        }
+        else if (elegirArticulo == 4) {
+            alert(listacarrito.join("\n"))
+        }
+        else if (elegirArticulo == 5) {
+            alert(`Que tenga un buen dia`)
+            break
+        }
+        else{
+            alert("Elija una de las opciones detalladas arriba. Porfavor")
+        }
+    }
+}
+
+alert (abrirTienda())
 
 /*Productos tienda*/
 const productos = document.querySelector(".tienda")
