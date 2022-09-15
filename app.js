@@ -1,6 +1,7 @@
 // Primera pre-entrega: funciones de orden superior
 
-const listacarrito = ["CARRITO DE COMPRAS:"]
+const listacarrito = [`CARRITO DE COMPRAS:
+Total:${cantidadInjertos*info.precioInjertos}+${cantidadVelasSoja*info.precioVelasSoja}+${cantidadComboDuo*info.comboDuo}`]
 let acceso = prompt("¡Bienvenid@! ¿Nos podria brindar su nombre? Muchas Gracias.")
 
 let correo = prompt(acceso.toLowerCase() + "." + " " + "Porfavor, ingrese su correo electronico para futuras compras")
@@ -44,7 +45,7 @@ function abrirTienda() {
         else if (elegirArticulo == 2) {
             let seleccionVelasSoja = Number(prompt(`Has seleccionado Velas de Soja
                     
-                Precio por unidad: ${info.velasSoja}
+                Precio por unidad: ${info.precioVelasSoja}
             
             
             1: Agregar al carrito
@@ -75,7 +76,7 @@ function abrirTienda() {
                 let cantidadComboDuo = Number(prompt("¿Cuantos Combos Duos desea llevarse?"))
                 alert(`Has agregado al carrito: ${cantidadComboDuo} Combo Duo.
                             "ENTER para volver al menu"`,
-                            listacarrito.push(`Combo Duo: ${cantidadComboDuo} unidades. Total: ${cantidadComboDuo*info.comboDuo} (Precio unidad: ${info.precioComboDuo})`))
+                            listacarrito.push(`Combo Duo: ${cantidadComboDuo} unidades. Total: ${cantidadComboDuo*info.precioComboDuo} (Precio unidad: ${info.precioComboDuo})`))
             }            
         }
         else if (elegirArticulo == 4) {
