@@ -1,7 +1,6 @@
 // Primera pre-entrega: funciones de orden superior
 
-const listacarrito = [`CARRITO DE COMPRAS:
-Total:${cantidadInjertos*info.precioInjertos}+${cantidadVelasSoja*info.precioVelasSoja}+${cantidadComboDuo*info.comboDuo}`]
+const listacarrito = [`CARRITO DE COMPRAS:`]
 let acceso = prompt("¡Bienvenid@! ¿Nos podria brindar su nombre? Muchas Gracias.")
 
 let correo = prompt(acceso.toLowerCase() + "." + " " + "Porfavor, ingrese su correo electronico para futuras compras")
