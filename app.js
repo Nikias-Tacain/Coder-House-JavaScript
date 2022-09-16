@@ -94,6 +94,9 @@ function abrirTienda() {
 alert (abrirTienda())
 
 /*Productos tienda*/
+function agregar() {
+    alert("El producto se agrego exitosamente al carrito")
+}
 const productos = document.querySelector(".tienda")
 
 function creartarjeta([img,producto,nombre,precio,carrito]) {
@@ -104,7 +107,7 @@ function creartarjeta([img,producto,nombre,precio,carrito]) {
             <h2 class="tarjetas__nombre">${nombre}</h2>
             <p class="tarjetas__precio">${precio}</p>
             <br>
-            <button class="tarjetas__botton">${carrito}</button>
+            <button onclick="agregar()" class="tarjetas__botton">${carrito}</button>
         </div>
     </div>`
     productos.innerHTML += code;
