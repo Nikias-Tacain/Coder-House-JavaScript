@@ -33,18 +33,26 @@
             <div>
                 <h3>Ingrese sus datos para completar la compra:</h3>
             </div>
-            <div>
-                <label for="name">Nombre y Apellido:</label>
-                <label for="mail">Telefono:</label>
-                <label for="mail">Correo Electronico:</label>
+            <div id="ingreseDatos">
+                <label class="">Nombre y Apellido:</label>
+                <label class="">Telefono:</label>
+                <label class="">Correo Electronico:</label>
             </div>
-            <div>
-                <input type="text" id="name">
-                <input type="text" id="phone">
+            <div id="botonesDatos">
+                <input type="text" class="nombre" id="name">
+                <div id="botonDatoNombre">
+                    <input type="number" class="numero" id="phone">
+                </div>
                 <input type="text" id="email">
-                <button id="enviarInfo">Enviar Informacion</button>
+                <div id="botonDatoEnviar">
+                    <button type="submit" class="buttonEnviar">Enviar Informacion</button>
+                </div>
+            </div>
+            <div id="carro">
+
             </div>
         </section>
     </main>
+    <script src="../app.js"></script>
 </body>
 </html>

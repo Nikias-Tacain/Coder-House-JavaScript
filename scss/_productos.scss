@@ -34,6 +34,12 @@
     &__main{
         background-color: bisque;
     }
+    &::-webkit-scrollbar{
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: rgb(194, 250, 194);
+    }
 }
 .productos__select{
     text-decoration:line-through;
@@ -70,10 +76,5 @@
     }
     &__precio{
         font-size: large;
-    }
-    &__botton{
-        &__ver{
-            margin-left: 100px;
-        }
     }
 }
