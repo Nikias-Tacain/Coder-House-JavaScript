@@ -10,6 +10,7 @@ function productosCarrito() {
                             Dirijase al carrito para finalizar su compra.
 
                                                 ¡Muchas Gracias!`)
+    
 }
 /*manipulacion del input nombre*/
 const alertaNombre = document.querySelectorAll(".numero")
@@ -34,6 +35,15 @@ function imprimirTextoEnviar() {
     divdatosEnviar.appendChild(parrafoEnviar)
 }
 
-/*localstorange*/
-localStorage.setItem(alertCarrito, 1)
+/*localstorage*/
+carrito = []
 
+function productoInjertos() {
+    let articulos = {
+        articuloInjerto: "Injertos", precio: 1300
+    }
+    carrito.push(`${articulos.articuloInjerto}: ${articulos.precio}`)
+    console.log(carrito);
+}
+localStorage.setItem(alertCarrito, 1)
+localStorage.setItem(carrito, 2)
