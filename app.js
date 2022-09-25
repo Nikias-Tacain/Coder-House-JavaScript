@@ -1,18 +1,22 @@
-/*Alerta "Has agregado productos al carrito*/
-const alertCarrito = document.querySelectorAll(".tarjetas__botton")
-alertCarrito.forEach(alertCarritoButton => {
-    alertCarritoButton.addEventListener("click", productosCarrito)
-})
-function productosCarrito() {
-    alert(`                            El producto se ha agregado exitosamente.
-
-
-                            Dirijase al carrito para finalizar su compra.
-
-                                                ¡Muchas Gracias!`)
-    
+/*carrito de compras*/
+const carrito = []
+/*sin articulos en el carrito*/
+function armandoCarrito() {
+    const carritoCompleto = document.getElementById("carro")
+    let carritoVacio = document.createElement("span")
+    carritoVacio.innerHTML = (carrito.length === 0 && `Carrito vacio.Porfavor dirijase a `)
+    carritoCompleto.appendChild(carritoVacio)
 }
-/*manipulacion del input nombre*/
+/*pronto eliminar y cambiar*/
+armandoCarrito()
+function productoInjertos() {
+    let articulos = {
+        articuloInjerto: "Injertos", precio: 1300
+    }
+    carrito.push(`${articulos.articuloInjerto}: ${articulos.precio}`)
+    console.log(carrito);    
+}
+/*manipulacion del input celular*/
 const alertaNombre = document.querySelectorAll(".numero")
 alertaNombre.forEach(alertaNombreButton => {
     alertaNombreButton.addEventListener(`input`, imprimirTextoNombre)
@@ -36,14 +40,4 @@ function imprimirTextoEnviar() {
 }
 
 /*localstorage*/
-carrito = []
-
-function productoInjertos() {
-    let articulos = {
-        articuloInjerto: "Injertos", precio: 1300
-    }
-    carrito.push(`${articulos.articuloInjerto}: ${articulos.precio}`)
-    console.log(carrito);
-}
-localStorage.setItem(alertCarrito, 1)
-localStorage.setItem(carrito, 2)
+localStorage.setItem(carrito, 1)

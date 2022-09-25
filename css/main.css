@@ -117,7 +117,6 @@ li {
   justify-content: space-around; }
 
 .tarjetas {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   min-width: 200px;
@@ -136,3 +135,13 @@ li {
     color: #4287f5; }
   .tarjetas__precio {
     font-size: large; }
+  .tarjetas__botton {
+    cursor: pointer; }
+
+.div__carrito {
+  display: flex;
+  position: relative; }
+
+.div__boton {
+  position: absolute;
+  margin-left: 210px; }
