@@ -4,17 +4,27 @@ const carrito = []
 function armandoCarrito() {
     const carritoCompleto = document.getElementById("carro")
     let carritoVacio = document.createElement("span")
+    let carritoNoVacio = document.createElement("span")
     carritoVacio.innerHTML = (carrito.length === 0 && `Carrito vacio.Porfavor dirijase a `)
     carritoCompleto.appendChild(carritoVacio)
+    carritoNoVacio.innerHTML = (carrito.length !== 0 && carrito)
 }
-/*pronto eliminar y cambiar*/
 armandoCarrito()
+/*alerta sweetAlert*/
+
+/*pronto eliminar y cambiar*/
 function productoInjertos() {
-    let articulos = {
+    /*let articulos = {
         articuloInjerto: "Injertos", precio: 1300
     }
     carrito.push(`${articulos.articuloInjerto}: ${articulos.precio}`)
-    console.log(carrito);    
+    console.log(carrito);*/
+    Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+    })
 }
 /*manipulacion del input celular*/
 const alertaNombre = document.querySelectorAll(".numero")
