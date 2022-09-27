@@ -11,21 +11,14 @@ function armandoCarrito() {
 }
 armandoCarrito()
 /*alerta sweetAlert*/
-
-/*pronto eliminar y cambiar*/
-function productoInjertos() {
-    /*let articulos = {
-        articuloInjerto: "Injertos", precio: 1300
-    }
-    carrito.push(`${articulos.articuloInjerto}: ${articulos.precio}`)
-    console.log(carrito);*/
-    Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
-        confirmButtonText: 'Cool'
-    })
-}
+let botonSweetAlert = document.querySelector('buttonProductos')
+botonSweetAlert.addEventListener('click', () => {
+    Swal.fire(
+        'The Internet?',
+        'That thing is still around?',
+        'question'
+    )
+});
 /*manipulacion del input celular*/
 const alertaNombre = document.querySelectorAll(".numero")
 alertaNombre.forEach(alertaNombreButton => {
