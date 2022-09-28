@@ -28,32 +28,31 @@
         </section>
     </header>
     <main>
-        <section id="carrito">
-            <h1>Carrito de Compras</h1>
-            <div>
-                <h3>Ingrese sus datos para completar la compra:</h3>
-            </div>
-            <div id="ingreseDatos">
-                <label class="">Nombre y Apellido:</label>
-                <label class="">Telefono:</label>
-                <label class="">Correo Electronico:</label>
-            </div>
-            <div id="botonesDatos">
-                <input type="text" class="nombre" id="name">
-                <div id="botonDatoNombre">
-                    <input type="number" class="numero" id="phone">
+        <section class="customer" id="customer">
+            <h1>INGRESE SUS DATOS</h1>
+            <div class="contact-card">
+                <div class="form">
+                    <div class="column-1">
+                        <label for="name">Nombre y apellido</label>
+                        <label for="mail">Telefono</label>
+                        <label for="mail">Direccion de correo</label>
+                    </div>
+                    <div class="column-2">
+                        <input class="field" type="text" name="name" id="name">
+                        <input class="field" type="text" name="phone" id="phone">
+                        <input class="field" type="text" name="adress" id="adress">
+                        <button onclick="mostrarMensajeAdress()" class="buton" id="enviarInfo">Enviar Info</button>
+                    </div>
                 </div>
-                <input type="text" id="email">
-                <div id="botonDatoEnviar">
-                    <button type="submit" class="buttonEnviar">Enviar Informacion</button>
-                </div>
-            </div>
-            <div class="div__carrito" id="carro">
-                <div class="div__boton">
-                    <button ><a href="./productos.html">productos</a></button>
-                </div>
+
             </div>
         </section>
+        <p id="mensaje"></p>
+        <div class="div__carrito" id="carro">
+            <div class="div__boton">
+                
+            </div>
+        </div>
     </main>
     <script src="../app.js"></script>
 </body>
