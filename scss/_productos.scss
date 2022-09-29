@@ -54,9 +54,10 @@
     justify-content: space-around;
 }
 .tarjetas{
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 400px;
     max-width: 300px;
     text-align: center;
     min-height: 370px;
@@ -79,12 +80,27 @@
     &__botton{
         cursor: pointer;
     }
+    &__img{
+        width: 550px;
+        height: 300px;
+    }
 }
-.div__carrito{
+.divContenedor{
+    margin-top: 45px;
+}
+.carrito-contenedor{
+    background-color: #4287f5;
+    margin-top: 25px;
+}
+.productoEnCarrito{
+    margin-top: 9px;
+    border-bottom: 1px solid white;
     display: flex;
-    position: relative;
 }
-.div__boton{
-    position: absolute;
-    margin-left: 210px;
+.boton-eliminar{
+    margin-left: 10px;
+}
+.carrito__precio{
+    margin-left: 15px;
+    margin-right: 15px;
 }
