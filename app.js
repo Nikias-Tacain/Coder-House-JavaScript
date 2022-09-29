@@ -25,8 +25,24 @@ let contenedorProductos = document.getElementById('divTarjetas');
 
 const contenedorCarrito = document.getElementById('carritoContenedor')
 
+const vaciarCarrito = document.getElementById('vaciar-carrito')
+
+const precioTotal = document.getElementById('precioTotal')
+
 /*carrito de compras*/
-const carrito = []
+let carrito = []
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
+
+vaciarCarrito.addEventListener('click', () => {
+    carrito.length = 0
+    actualizarCarrito()
+})
 
 stockProductos.forEach((producto) => {
     const div = document.createElement("div");
@@ -44,14 +60,31 @@ stockProductos.forEach((producto) => {
     });
 });
 const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some (prod => prod.id === prodId)
+
+    if (existe) {
+        const prod = carrito.map (prod => {
+            if (prod.id === prodId)  {
+                prod.cantidad++
+            }
+        })
+    }else{
+
     const item = stockProductos.find((prod) => prod.id === prodId);
     carrito.push(item)
-    actualizarCarrito()
-    console.log(carrito);
+}
+actualizarCarrito()
 };
 
+const eliminarDelCarrito = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1)
+    actualizarCarrito()
+}
+
 const actualizarCarrito = () => {
-    contenedorCarrito.innerHTML = "Carrito de compras:"
+    contenedorCarrito.innerHTML = ""
     carrito.forEach((prod) => {
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
@@ -63,7 +96,10 @@ const actualizarCarrito = () => {
 
         contenedorCarrito.appendChild(div)
 
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+
     })
+    precioTotal.innerHTML = carrito.reduce((acc, prod) => acc + prod.precio, 0)
 }
 
 /*localstorage*/

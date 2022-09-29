@@ -89,7 +89,6 @@
     margin-top: 45px;
 }
 .carrito-contenedor{
-    background-color: #4287f5;
     margin-top: 25px;
 }
 .productoEnCarrito{
@@ -98,9 +97,16 @@
     display: flex;
 }
 .boton-eliminar{
+    cursor: pointer;
     margin-left: 10px;
 }
 .carrito__precio{
     margin-left: 15px;
     margin-right: 15px;
+}
+.divCarritoContenedor{
+    margin-bottom: 15px;
+}
+.botonVaciarCarrito{
+    cursor: pointer;
 }
