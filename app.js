@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 vaciarCarrito.addEventListener('click', () => {
     carrito.length = 0
+    Swal.fire({
+        title: 'Carrito Vaciado!',
+        text: 'Has eliminado el carrito correctamente !',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      })
     actualizarCarrito()
 })
 
@@ -69,7 +75,7 @@ const agregarAlCarrito = (prodId) => {
             }
         })
     }else{
-
+        
     const item = stockProductos.find((prod) => prod.id === prodId);
     carrito.push(item)
 }
