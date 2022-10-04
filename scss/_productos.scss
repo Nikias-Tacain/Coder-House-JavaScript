@@ -57,7 +57,7 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    min-width: 400px;
+    min-width: 200px;
     max-width: 300px;
     text-align: center;
     min-height: 370px;
@@ -89,6 +89,7 @@
     margin-top: 45px;
 }
 .carrito-contenedor{
+    border-top: 1px solid white;
     margin-top: 25px;
 }
 .productoEnCarrito{
@@ -109,4 +110,13 @@
 }
 .botonVaciarCarrito{
     cursor: pointer;
+}
+.finalizarCompra{
+    cursor: pointer;
+}
+.precioProducto{
+    border-bottom: 1px solid white;
+}
+.botonesCarrito{
+    margin-top: 5px;
 }

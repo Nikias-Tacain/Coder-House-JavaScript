@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Green Love Productos</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="stylesheet" href="../css/main.css">
 
     </head>
@@ -27,13 +28,6 @@
                 </ul>
             </div>
         </section>
-        <div class="productos__header__section__div__carrito">
-            <ul>
-                <li>
-                    <a href="./carrito.html">🛒</a>
-                </li>
-            </ul>
-        </div>
     </header>
     <main class="productos__main" id="contenedorProductos">
         <div class="divContenedor" id="divContenedor">
@@ -47,11 +41,18 @@
 
             </div>
             <p class="precioProducto">Precio Total: $<span id="precioTotal">0</span></p>
-            <button id="vaciar-carrito" class="botonVaciarCarrito">Vaciar carrito</button>
+            <div id="botonesCarrito" class="botonesCarrito">
+                <button id="vaciar-carrito" class="botonVaciarCarrito">Vaciar carrito</button>
+                <button id="finalizarCompra" class="finalizarCompra">Finalizar compra</button>
+                <span>(Una vez finalizada la compra desliza hacia abajo y completa tus datos)</span>
+            </div>
+        <div id="datosDiv"></div>
         </div>
+        <p id="mensaje"></p>  
     </main>
 
     <script src="../app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
