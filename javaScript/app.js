@@ -9,6 +9,7 @@ const precioTotal = document.getElementById('precioTotal')
 const formularioCarrito = document.getElementById('finalizarCompra')
 
 const formularioDiv = document.getElementById('datosDiv')
+
 /*Productos --- Tienda*/
     fetch('../constructor/data.json')
         .then((res)=>res.json())
@@ -29,7 +30,7 @@ const formularioDiv = document.getElementById('datosDiv')
                 });
             });
             //carrito de compras
-            let carrito = []
+            let carrito = [];
 
             vaciarCarrito.addEventListener('click', () => {
                 Swal.fire({
@@ -39,7 +40,6 @@ const formularioDiv = document.getElementById('datosDiv')
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire('Se ha eliminado correctamente el carrito', '', 'success')
-                        // carrito.length = 0
                         carrito = []
                         actualizarCarrito()
                     } else if (result.isDenied) {
@@ -66,16 +66,13 @@ const formularioDiv = document.getElementById('datosDiv')
                     })
                 }
                 else
-                {    
+                {   
                     const item = data.find((prod) => prod.id === prodId);
                     carrito.push(item)
                 }
                 actualizarCarrito()
             }
             const eliminarDelCarrito = (prodId) => {
-            // function eliminarDelCarrito(prodId)
-            // {
-                console.log("abc");
                 Toastify({
 
                     text: "Ha sido eliminado con exito.",
@@ -103,8 +100,6 @@ const formularioDiv = document.getElementById('datosDiv')
                     <button id="trash_button${prod.id}" class="boton-eliminar">🗑️</button>`
                     
 
-                    //<button onclick = "eliminarDelCarrito(${prod.id})" class="boton-eliminar">🗑️</button>`
-
                     contenedorCarrito.appendChild(div);
                     
                     console.log(`trash_button${prod.id}`);
@@ -126,7 +121,8 @@ const formularioDiv = document.getElementById('datosDiv')
                 }).then((result) => {
                     if (result.isConfirmed)
                     {
-                        botonesCarrito.innerHTML = ""
+                        botonesCarrito.innerHTML = "";
+                        contenedorCarrito.innerHTML = ""
                         const div = document.createElement('div');
                         div.innerHTML = `<h1>INGRESE SUS DATOS</h1>
                             <div class="contact-card">
@@ -164,7 +160,6 @@ const formularioDiv = document.getElementById('datosDiv')
                     datosDiv.innerHTML = ""
                     mensajeInputs.innerHTML =`Gracias ${inputvalueName} !!!, los datos fueron registrados correctamente, te mandaremos el resumen de su compra a esta direccion de correo electronico: ${inputvalue}`
                     localStorage.setItem('carrito', carrito);
-                    actualizarCarrito()
                 }
             })
             if (localStorage.getItem('carrito')) {

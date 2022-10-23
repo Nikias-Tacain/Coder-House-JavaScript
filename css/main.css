@@ -138,9 +138,6 @@ li {
     font-size: large; }
   .tarjetas__botton {
     cursor: pointer; }
-  .tarjetas__img {
-    width: 550px;
-    height: 300px; }
 
 .divContenedor {
   margin-top: 45px; }
