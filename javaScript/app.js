@@ -31,7 +31,6 @@ const formularioDiv = document.getElementById('datosDiv')
             });
             //carrito de compras
             let carrito = [];
-
             vaciarCarrito.addEventListener('click', () => {
                 Swal.fire({
                     title: '¿Deseas borrar todo tu carrito?',
@@ -59,6 +58,7 @@ const formularioDiv = document.getElementById('datosDiv')
 
                 if (existe)
                 {
+                    
                     const prod = carrito.map (prod => {
                         if (prod.id === prodId)  {
                             prod.cantidad++
@@ -89,7 +89,11 @@ const formularioDiv = document.getElementById('datosDiv')
                 actualizarCarrito()
             }
             const actualizarCarrito = () => {
-                contenedorCarrito.innerHTML = ""
+                if (carrito==0) {
+                    contenedorCarrito.innerHTML = "El carrito se encuentra vacio...";
+                } else {
+                    contenedorCarrito.innerHTML = "";
+                }
                 carrito.forEach((prod) => {
                     const div = document.createElement('div')
                     div.className = ('productoEnCarrito')
@@ -99,7 +103,6 @@ const formularioDiv = document.getElementById('datosDiv')
                     <p>Cantidad: <span id="cantidad">${prod.cantidad}<span></p>
                     <button id="trash_button${prod.id}" class="boton-eliminar">🗑️</button>`
                     
-
                     contenedorCarrito.appendChild(div);
                     
                     console.log(`trash_button${prod.id}`);
